@@ -17,7 +17,7 @@ ENTRYPOINT /usr/sbin/apache2ctl -D FOREGROUND
 RUN mv /var/www/html/index.html /var/www/html/index.html.old
 
 # Récupération de mon repository Git avec le mini projet
-RUN git clone https://github.com/sebhochuli/GDC2021
+RUN git clone https://github.com/sebhochuli/seb
 
 # Copie des fichiers du mini projet web vers la racine de mon serveur web
-RUN cd get-ready-simple-countdown-html-css-js && cp * /var/www/html/
+RUN cd seb && cp * /var/www/html/
