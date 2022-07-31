@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+###> doctrine/doctrine-bundle ###
+  database:
+    container_name: database
+    image: mariadb:10.8.3
+    ports:
+      - 3306:3306
+    volumes:
+      - ~/apps/mariadb:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=B3stS3cret3v3r
+      - MYSQL_PASSWORD=An0thrS3crt
+      - MYSQL_USER=twentyfour
+      - MYSQL_DATABASE=seb
+
+volumes:
+###> doctrine/doctrine-bundle ###
+  db-data:
+###< doctrine/doctrine-bundle ###
