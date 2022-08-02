@@ -20,4 +20,4 @@ RUN mv /var/www/html/index.html /var/www/html/index.html.old
 RUN git clone https://github.com/sebhochuli/seb
 
 # Copie des fichiers du mini projet web vers la racine de mon serveur web
-RUN cd seb && cp * /var/www/html/
+RUN cd seb && cp -R * /var/www/html/
